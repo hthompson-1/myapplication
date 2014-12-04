@@ -49,7 +49,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="PQR-Fw-Dan" kind="show" id="GTG-AP-9qx"/>
+                                    <segue destination="aa1-2M-prj" kind="show" id="29a-Q0-Zw1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,7 +99,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TFI-ma-Yq9">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="wmU-x1-M4V"/>
+                                    <constraint firstAttribute="height" constant="128" id="wmU-x1-M4V">
+                                        <variation key="widthClass=compact" constant="154"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -133,6 +135,9 @@
                                         <include reference="wVy-A1-4c1"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="PQR-Fw-Dan" kind="show" id="US4-La-4jG"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OYI-yB-L6r">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -159,18 +164,30 @@
                             <constraint firstAttribute="centerX" secondItem="TFI-ma-Yq9" secondAttribute="centerX" id="1H0-lE-vFY">
                                 <variation key="widthClass=compact" constant="8"/>
                             </constraint>
-                            <constraint firstItem="ADI-8d-q5M" firstAttribute="top" secondItem="OYI-yB-L6r" secondAttribute="bottom" constant="84" id="4y7-xC-rSS"/>
+                            <constraint firstItem="ADI-8d-q5M" firstAttribute="top" secondItem="OYI-yB-L6r" secondAttribute="bottom" constant="84" id="4y7-xC-rSS">
+                                <variation key="widthClass=compact" constant="42"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="TFI-ma-Yq9" secondAttribute="trailing" constant="16" id="Df7-Ir-iLg">
                                 <variation key="widthClass=compact" constant="32"/>
                             </constraint>
                             <constraint firstItem="TFI-ma-Yq9" firstAttribute="leading" secondItem="dD3-h3-fZi" secondAttribute="leadingMargin" constant="16" id="Dtq-lj-d2j"/>
-                            <constraint firstItem="ADI-8d-q5M" firstAttribute="leading" secondItem="dD3-h3-fZi" secondAttribute="leadingMargin" constant="16" id="FNF-1n-joH"/>
+                            <constraint firstItem="ADI-8d-q5M" firstAttribute="leading" secondItem="dD3-h3-fZi" secondAttribute="leadingMargin" constant="16" id="FNF-1n-joH">
+                                <variation key="widthClass=compact" constant="129"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="k6m-0G-JPp" secondAttribute="centerX" id="Hbc-O5-aTk"/>
-                            <constraint firstItem="OYI-yB-L6r" firstAttribute="leading" secondItem="dD3-h3-fZi" secondAttribute="leadingMargin" constant="16" id="cw8-B9-vG7"/>
-                            <constraint firstItem="TFI-ma-Yq9" firstAttribute="top" secondItem="ADI-8d-q5M" secondAttribute="bottom" constant="72" id="h4X-MR-8YO"/>
-                            <constraint firstItem="k6m-0G-JPp" firstAttribute="top" secondItem="TFI-ma-Yq9" secondAttribute="bottom" constant="19" id="hfd-u6-yF7"/>
+                            <constraint firstItem="OYI-yB-L6r" firstAttribute="leading" secondItem="dD3-h3-fZi" secondAttribute="leadingMargin" constant="16" id="cw8-B9-vG7">
+                                <variation key="widthClass=compact" constant="129"/>
+                            </constraint>
+                            <constraint firstItem="TFI-ma-Yq9" firstAttribute="top" secondItem="ADI-8d-q5M" secondAttribute="bottom" constant="72" id="h4X-MR-8YO">
+                                <variation key="widthClass=compact" constant="44"/>
+                            </constraint>
+                            <constraint firstItem="k6m-0G-JPp" firstAttribute="top" secondItem="TFI-ma-Yq9" secondAttribute="bottom" constant="19" id="hfd-u6-yF7">
+                                <variation key="widthClass=compact" constant="45"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="OYI-yB-L6r" secondAttribute="trailing" constant="16" id="jtH-v9-lAs"/>
-                            <constraint firstItem="OYI-yB-L6r" firstAttribute="top" secondItem="EIC-1x-K2L" secondAttribute="bottom" id="qaa-ic-DDV"/>
+                            <constraint firstItem="OYI-yB-L6r" firstAttribute="top" secondItem="EIC-1x-K2L" secondAttribute="bottom" id="qaa-ic-DDV">
+                                <variation key="widthClass=compact" constant="18"/>
+                            </constraint>
                             <constraint firstItem="k6m-0G-JPp" firstAttribute="top" secondItem="dD3-h3-fZi" secondAttribute="topMargin" constant="20" id="taL-8r-3cf"/>
                         </constraints>
                         <variation key="default">
@@ -225,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWb-Xb-oLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708.5" y="-615"/>
+            <point key="canvasLocation" x="1276.5" y="64"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -271,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2277" y="80"/>
+            <point key="canvasLocation" x="3678" y="148"/>
         </scene>
         <!--Title-->
         <scene sceneID="SgR-3q-vIG">
@@ -333,48 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ix-xg-Cge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="64"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="Gz7-tk-wV2">
-            <objects>
-                <viewController id="nMC-u3-vTt" customClass="WebViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N2B-PJ-LQW"/>
-                        <viewControllerLayoutGuide type="bottom" id="oIO-kd-I5h"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5eO-ze-34N">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PQ-r3-3w3">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="5" y="14" width="309" height="546"/>
-                                </variation>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="3PQ-r3-3w3"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="3PQ-r3-3w3"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="webView" destination="3PQ-r3-3w3" id="OTM-vG-zkm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nwf-Fb-bpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1380" y="767"/>
+            <point key="canvasLocation" x="1923" y="64"/>
         </scene>
     </scenes>
 </document>
