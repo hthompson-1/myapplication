@@ -15,6 +15,9 @@
 		079F6D1D19E743F2004EF875 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079F6D1C19E743F2004EF875 /* Images.xcassets */; };
 		079F6D2019E743F2004EF875 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 079F6D1E19E743F2004EF875 /* LaunchScreen.xib */; };
 		079F6D2C19E743F2004EF875 /* myfirstapplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 079F6D2B19E743F2004EF875 /* myfirstapplicationTests.m */; };
+		07AACDE61A1EAD9E001453C0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AACDE51A1EAD9E001453C0 /* WebViewController.m */; };
+		07B156F219F0855B00963C26 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B156F119F0855B00963C26 /* MapKit.framework */; };
+		07B156F519F0884200963C26 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B156F419F0884200963C26 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,11 @@
 		079F6D2519E743F2004EF875 /* myfirstapplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myfirstapplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		079F6D2A19E743F2004EF875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		079F6D2B19E743F2004EF875 /* myfirstapplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myfirstapplicationTests.m; sourceTree = "<group>"; };
+		07AACDE41A1EAD9E001453C0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		07AACDE51A1EAD9E001453C0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		07B156F119F0855B00963C26 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		07B156F319F0884200963C26 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		07B156F419F0884200963C26 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B156F219F0855B00963C26 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,7 @@
 		079F6D0019E743F2004EF875 = {
 			isa = PBXGroup;
 			children = (
+				07B156F119F0855B00963C26 /* MapKit.framework */,
 				079F6D0B19E743F2004EF875 /* myfirstapplication */,
 				079F6D2819E743F2004EF875 /* myfirstapplicationTests */,
 				079F6D0A19E743F2004EF875 /* Products */,
@@ -90,7 +100,11 @@
 				079F6D1419E743F2004EF875 /* MasterViewController.m */,
 				079F6D1619E743F2004EF875 /* DetailViewController.h */,
 				079F6D1719E743F2004EF875 /* DetailViewController.m */,
+				07B156F319F0884200963C26 /* MapViewController.h */,
+				07B156F419F0884200963C26 /* MapViewController.m */,
 				079F6D1919E743F2004EF875 /* Main.storyboard */,
+				07AACDE41A1EAD9E001453C0 /* WebViewController.h */,
+				07AACDE51A1EAD9E001453C0 /* WebViewController.m */,
 				079F6D1C19E743F2004EF875 /* Images.xcassets */,
 				079F6D1E19E743F2004EF875 /* LaunchScreen.xib */,
 				079F6D0C19E743F2004EF875 /* Supporting Files */,
@@ -173,6 +187,11 @@
 				TargetAttributes = {
 					079F6D0819E743F2004EF875 = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					079F6D2419E743F2004EF875 = {
 						CreatedOnToolsVersion = 6.0;
@@ -225,7 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				079F6D1219E743F2004EF875 /* AppDelegate.m in Sources */,
+				07AACDE61A1EAD9E001453C0 /* WebViewController.m in Sources */,
 				079F6D1519E743F2004EF875 /* MasterViewController.m in Sources */,
+				07B156F519F0884200963C26 /* MapViewController.m in Sources */,
 				079F6D0F19E743F2004EF875 /* main.m in Sources */,
 				079F6D1819E743F2004EF875 /* DetailViewController.m in Sources */,
 			);
