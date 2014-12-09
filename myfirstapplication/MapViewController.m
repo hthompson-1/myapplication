@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    CLLocationCoordinate2D Lexington = CLLocationCoordinate2DMake(38.04, -84.5);
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(Lexington, 10000, 10000);
+    CLLocationCoordinate2D SaintLouis = CLLocationCoordinate2DMake(38.63, -90.2);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(SaintLouis, 10000, 10000);
     [_mapView setRegion:region];
     
     CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(38.04, -84.5);

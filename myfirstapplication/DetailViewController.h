@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MapKit/MapKit.h>
 
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UITextField *contactNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *phoneNumberTextField;
+@property (strong, nonatomic) IBOutlet UITextField *companyNameTextField;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "Contact.h"
 
 @interface MasterViewController ()
 
@@ -26,7 +27,40 @@
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
     }
-    //    contact
+    Contact *contact1 = [[Contact alloc] init];
+    contact1.contactName = @"Captain America";
+    contact1.phoneNumber = @"123-456-7890";
+    contact1.companyName = @"Shield";
+    contact1.mapArea = @"SaintLouis";
+    [self.objects insertObject:contact1 atIndex:0];
+    
+    Contact *contact2 = [[Contact alloc] init];
+    contact2.contactName = @"Batman";
+    contact2.phoneNumber = @"0123-456-789";
+    contact2.companyName = @"Shield";
+    contact2.mapArea = @"Chicago";
+    [self.objects insertObject:contact2 atIndex:0];
+    
+    Contact *contact3 = [[Contact alloc] init];
+    contact3.contactName = @"Ironman";
+    contact3.phoneNumber = @"098-765-4321";
+    contact3.companyName = @"Shield";
+    contact3.mapArea = @"NewYork";
+    [self.objects insertObject:contact3 atIndex:0];
+    
+    Contact *contact4 = [[Contact alloc] init];
+    contact4.contactName = @"Hulk";
+    contact4.phoneNumber = @"345-678-9012";
+    contact4.companyName = @"Shield";
+    contact4.mapArea = @"Lexington";
+    [self.objects insertObject:contact4 atIndex:0];
+    
+    Contact *contact5 = [[Contact alloc] init];
+    contact5.contactName = @"Superman";
+    contact5.phoneNumber = @"234-567-8901";
+    contact5.companyName = @"Shield";
+    contact5.mapArea = @"Louisville";
+    [self.objects insertObject:contact5 atIndex:0];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
@@ -43,7 +77,9 @@
     if (!self.objects) {
         self.objects = [[NSMutableArray alloc] init];
     }
-    [self.objects insertObject:@"Contact Name" atIndex:0];
+    Contact *sampleContact = [[Contact alloc] init];
+    sampleContact.contactName = @"Contact Name";
+    [self.objects insertObject:sampleContact atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -53,7 +89,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        Contact *object = self.objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }
@@ -71,8 +107,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Contact *object = self.objects[indexPath.row];
+    cell.textLabel.text = [object contactName];
     return cell;
 }
 

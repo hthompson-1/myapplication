@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Contact.h"
 
 @interface DetailViewController ()
 
@@ -28,14 +29,24 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.contactNameTextField.text = [self.detailItem contactName];
+        self.phoneNumberTextField.text = [self.detailItem phoneNumber];
+        self.companyNameTextField.text = [self.detailItem companyName];
     }
+}
+
+- (void)configureMap {
+    CLLocationCoordinate2D SaintLouis = CLLocationCoordinate2DMake(38.63, -90.2);
+    CLLocationCoordinate2D NewYork = CLLocationCoordinate2DMake(40.71, -74.01);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([self.detailItem mapArea], 10000, 10000);
+    [_mapView setRegion:region];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    [self configureMap];
 }
 
 - (void)didReceiveMemoryWarning {
