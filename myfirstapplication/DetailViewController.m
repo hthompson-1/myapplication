@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "Contact.h"
+#import "MapViewController.h"
 
 @interface DetailViewController ()
 
@@ -36,9 +37,7 @@
 }
 
 - (void)configureMap {
-    CLLocationCoordinate2D SaintLouis = CLLocationCoordinate2DMake(38.63, -90.2);
-    CLLocationCoordinate2D NewYork = CLLocationCoordinate2DMake(40.71, -74.01);
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([self.detailItem mapArea], 10000, 10000);
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance ([self.detailItem mapArea], 10000, 10000);
     [_mapView setRegion:region];
 }
 
@@ -52,6 +51,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showMap"]) {
+        [[segue destinationViewController] setMapRegion:self.detailItem];
+    }
 }
 
 @end

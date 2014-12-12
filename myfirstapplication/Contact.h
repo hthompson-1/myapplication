@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface Contact : NSObject
 
 @property (strong, nonatomic) NSString *contactName;
 @property (strong, nonatomic) NSString *phoneNumber;
 @property (strong, nonatomic) NSString *companyName;
-@property (strong, nonatomic) NSString *mapArea;
+@property (nonatomic) CLLocationCoordinate2D mapArea;
 
 @end

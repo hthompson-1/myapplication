@@ -14,6 +14,15 @@
 
 @implementation MapViewController
 
+- (void)setMapRegion:(id)newMapRegion {
+    if (_mapRegion != newMapRegion) {
+        _mapRegion = newMapRegion;
+        
+        // Update the view.
+        [self configureView];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
