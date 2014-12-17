@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "MasterViewController.h"
 
 @interface MapViewController ()
 
@@ -19,21 +20,24 @@
         _mapRegion = newMapRegion;
         
         // Update the view.
-        [self configureView];
+        [self configureMap];
     }
+}
+
+- (void)configureMap {
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance ([self.mapRegion ], 10000, 10000);
+    [_mapView setRegion:region];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    CLLocationCoordinate2D SaintLouis = CLLocationCoordinate2DMake(38.63, -90.2);
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(SaintLouis, 10000, 10000);
-    [_mapView setRegion:region];
+    [self configureMap];
     
-    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(38.04, -84.5);
-    MKPointAnnotation *awesome = [[MKPointAnnotation alloc] init];
-    awesome.coordinate = coordinate;
-    [self.mapView addAnnotation:awesome];
+//    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(38.04, -84.5);
+//    MKPointAnnotation *awesome = [[MKPointAnnotation alloc] init];
+//    awesome.coordinate = coordinate;
+//    [self.mapView addAnnotation:awesome];
 }
 
 - (void)didReceiveMemoryWarning {
